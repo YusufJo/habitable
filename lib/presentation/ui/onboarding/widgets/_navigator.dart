@@ -30,7 +30,7 @@ class _Navigator extends StatelessWidget {
             width: 7,
           ),
         ),
-        _NavigationButton(onPressed: controller.moveNext, text: 'Next')
+        _NavigationButton(onPressed: controller.next, text: 'Next')
       ],
     );
   }

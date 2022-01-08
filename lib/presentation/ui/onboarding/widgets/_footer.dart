@@ -7,9 +7,12 @@ class _Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final lastPageIndex =
-        context.read<_OnboardingControllerCubit>().lastPageIndex;
+    final onboardingControllerCubit =
+        context.read<_OnboardingControllerCubit>();
+
+    final lastPageIndex = onboardingControllerCubit.numOfPages - 1;
     return BlocBuilder<_OnboardingControllerCubit, int>(
+      bloc: onboardingControllerCubit,
       buildWhen: (oldState, newState) =>
           newState == lastPageIndex || oldState == lastPageIndex,
       builder: (context, state) {

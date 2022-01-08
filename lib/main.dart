@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habitable/presentation/ui/login/login.dart';
-import 'presentation/ui/signup/signup.dart';
+import 'presentation/ui/onboarding/onboarding.dart';
 import 'presentation/shared/responsive/responsive_app.dart';
 
 void main() {
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: lightTheme,
         title: 'Habitable',
-        home: const SignupScreen(),
+        home: const OnboardingScreen(),
       ),
     );
   }

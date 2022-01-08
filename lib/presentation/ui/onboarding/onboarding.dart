@@ -21,3 +21,5 @@ part 'widgets/_footer.dart';
 part 'controller/_onboarding_controller_cubit.dart';
 
 part 'model/_data_model.dart';
+
+part 'data/views_data.dart';

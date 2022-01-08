@@ -43,20 +43,23 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final responsiveSizer = ResponsiveSizer.of(context);
     return BlocProvider.value(
       value: _controllerCubit,
       child: Builder(builder: (context) {
         return Scaffold(
           backgroundColor: Colors.white,
           body: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 60.0),
+            child: SizedBox(
+              height: responsiveSizer.deviceHeight,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+                  SizedBox(
+                    height: responsiveSizer.topSafePadding(80),
+                  ),
                   Expanded(
-                    flex: 9,
                     child: PageView.builder(
                       controller: _pageController,
                       onPageChanged: _controllerCubit.changePage,
@@ -64,7 +67,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       itemBuilder: (_, index) {
                         final dataModel = _data[index];
                         return Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 32),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: responsiveSizer.width(32)),
                           child: _View(
                             title: dataModel.title,
                             assetPath: dataModel.assetPath,
@@ -73,17 +77,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       },
                     ),
                   ),
-                  const Expanded(
-                    child: FractionallySizedBox(
-                      heightFactor: 0.01,
-                    ),
+                  SizedBox(
+                    height: responsiveSizer.height(65),
                   ),
-                  const Expanded(
+                  SizedBox(
+                    height: responsiveSizer.height(100),
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      child: _Footer(),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: responsiveSizer.width(20)),
+                      child: const _Footer(),
                     ),
                   ),
+                  SizedBox(
+                    height: responsiveSizer.bottomSafePadding(100),
+                  )
                 ],
               ),
             ),

@@ -14,7 +14,7 @@ class _View extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         _Title(text: title),
-        Flexible(child: _Avatar(assetPath: assetPath)),
+        Expanded(child: _Avatar(assetPath: assetPath)),
         const _Subtitle(),
       ],
     );

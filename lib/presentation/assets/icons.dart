@@ -6,4 +6,5 @@ abstract class AssetIcons {
   static const email = _iconsPath + 'email.svg';
   static const password = _iconsPath + 'password.svg';
   static const user = _iconsPath + 'user.svg';
+  static const back = _iconsPath + 'back.svg';
 }

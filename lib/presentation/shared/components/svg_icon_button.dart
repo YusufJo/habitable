@@ -5,26 +5,36 @@ import '../responsive/responsive_app.dart';
 class SvgIconButton extends StatelessWidget {
   final String svgIconPath;
   final double? radius;
+  final double? iconWidth;
+  final double? containerHeight;
 
-  const SvgIconButton({Key? key, required this.svgIconPath, this.radius})
-      : super(key: key);
+  const SvgIconButton({
+    Key? key,
+    required this.svgIconPath,
+    this.radius,
+    this.iconWidth,
+    this.containerHeight
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final computedRadius =
+    final computedHeight =
         ResponsiveSizer.of(context).height(radius == null ? 44 : radius! * 2);
     return Container(
       clipBehavior: Clip.antiAlias,
-      height: computedRadius,
-      width: computedRadius,
+      height: containerHeight ?? computedHeight,
+      width: containerHeight ?? containerHeight,
       decoration: const BoxDecoration(
         shape: BoxShape.circle,
       ),
       child: Material(
         color: Theme.of(context).colorScheme.primary.withOpacity(0.1),
         child: IconButton(
-          splashRadius: computedRadius,
-          icon: SvgPicture.asset(svgIconPath, width: computedRadius * 0.25,),
+          splashRadius: computedHeight,
+          icon: SvgPicture.asset(
+            svgIconPath,
+            width: iconWidth ?? computedHeight * 0.25,
+          ),
           onPressed: () {},
         ),
       ),

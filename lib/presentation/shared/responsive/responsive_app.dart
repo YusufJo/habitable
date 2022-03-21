@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../assets/fonts.dart';
 
 part 'responsive_sizer.dart';

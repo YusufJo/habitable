@@ -1,16 +1,13 @@
-# habitable
+# Habitable - Flutter responsive UI Demo
 
-A habit builder app.
+---
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+|   Screen Name   |                          Visual Implementation                          |
+|:---------------:|:-----------------------------------------------------------------------:|
+|  onboarding 1   |    <img alt="onboarding-1" height="568" src="art/onboarding_1.png"/>    |
+|  onboarding 2   |    <img alt="onboarding-2" height="568" src="art/onboarding_2.png"/>    |
+|  onboarding 3   |    <img alt="onboarding-3" height="568" src="art/onboarding_3.png"/>    |
+|  onboarding 4   |    <img alt="onboarding-4" height="568" src="art/onboarding_4.png"/>    |
+|     signup      |          <img alt="signup" height="568" src="art/signup.png"/>          |
+|      login      |           <img alt="login" height="568" src="art/login.png"/>           |
+| forgot password | <img alt="forgot-password" height="568" src="art/forgot_password.png"/> |

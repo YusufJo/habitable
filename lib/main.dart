@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'presentation/ui/reset_password/reset_password.dart';
+import 'presentation/ui/onboarding/onboarding.dart';
 import 'presentation/shared/responsive/responsive_app.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: lightTheme,
         title: 'Habitable',
-        home: const ResetPasswordScreen(),
+        home: const OnboardingScreen(),
       ),
     );
   }
